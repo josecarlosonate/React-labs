@@ -2,8 +2,6 @@
 
 Repositorio dedicado al aprendizaje y práctica de **React**, mediante el desarrollo de pequeñas aplicaciones y ejercicios enfocados en fortalecer mis habilidades de desarrollo frontend.
 
-Los proyectos están basados principalmente en el curso *React y TypeScript — La Guía Completa* de Udemy, complementados con experimentos y mejoras personales.
-
 ## 🎯 Objetivos
 
 - Fortalecer los fundamentos de React.
@@ -63,10 +61,6 @@ npm run dev
 > Requiere Node.js y npm. Los comandos pueden variar según la configuración de cada aplicación.
 
 ## 📚 Referencias
-
-Parte de los ejercicios y aplicaciones están basados en el curso:
-
-[React y TypeScript — La Guía Completa, de Juan Pablo de la Torre](https://www.udemy.com/course/react-de-principiante-a-experto-creando-mas-de-10-aplicaciones/)
 
 Este repositorio tiene fines educativos. Las modificaciones, mejoras y funcionalidades adicionales desarrolladas de manera independiente se documentarán en cada proyecto.
 
