@@ -110,3 +110,103 @@ body {
     display: none;
   }
 }
+
+.products-grid {
+  width: min(100% - 2rem, 1200px);
+  margin: 2rem auto;
+
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+/* Tablets */
+@media (min-width: 768px) {
+  .products-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* Escritorio */
+@media (min-width: 1024px) {
+  .products-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.product-card {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background: white;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+@media (hover: hover) {
+  .product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(15, 23, 42, 0.12);
+    border-color: #cbd5e1;
+  }
+}
+
+.product-card__image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+@media (hover: hover) {
+  .product-card:hover .product-card__image {
+    transform: scale(1.04);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .product-card,
+  .product-card__image {
+    transition: none;
+  }
+
+  .product-card:hover,
+  .product-card:hover .product-card__image {
+    transform: none;
+  }
+}
+
+.product-card__content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.product-card__name {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.product-card__price {
+  margin: 0.5rem 0 0;
+  color: #475569;
+}
+
+.product-card__button {
+  width: 100%;
+  margin-top: auto;
+  padding: 0.75rem 0.5rem;
+  border: 0;
+  border-radius: 8px;
+  background: #111827;
+  color: white;
+  cursor: pointer;
+}
+
+.product-card__button:hover {
+  background: #374151;
+}
