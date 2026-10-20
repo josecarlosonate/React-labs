@@ -5,9 +5,11 @@ type CarProps = {
     isCarOpen: boolean
     setIsCarOpen: (value: boolean) => void
     carItems: Products[]
+    removeItemFromCart: (value: number) => void
+    clearCart: () => void
 }
 
-function Car({ isCarOpen, setIsCarOpen, carItems }: CarProps) {
+function Car({ isCarOpen, setIsCarOpen, carItems, removeItemFromCart, clearCart }: CarProps) {
     return (
         <>
             {isCarOpen &&
@@ -54,7 +56,7 @@ function Car({ isCarOpen, setIsCarOpen, carItems }: CarProps) {
                                                 </div>
                                             </div>
                                             <div>
-                                                <button className="cart-item-remove">
+                                                <button className="cart-item-remove" onClick={() => removeItemFromCart(item.id)}>
                                                     <Trash2 size={18} />
                                                 </button>
                                             </div>
@@ -68,7 +70,7 @@ function Car({ isCarOpen, setIsCarOpen, carItems }: CarProps) {
                                 </div>
 
                                 <div>
-                                    <button className="cart-clear-btn">vaciar carrito</button>
+                                    <button className="cart-clear-btn" onClick={clearCart}>vaciar carrito</button>
                                 </div>
                             </div>
                         }
