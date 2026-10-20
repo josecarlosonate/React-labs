@@ -15,7 +15,7 @@ function Product({ product, addItemToCart }: ProductProps) {
                 <div className="product-card__content">
                     <div>
                         <h3 className="product-card__name">{name}</h3>
-                        <p className="product-card__price">{price}</p>
+                        <p className="product-card__price">{price.toLocaleString('es-ES')} COP</p>
                     </div>
                     <button type="button" className="product-card__button" onClick={() => addItemToCart(id)}>
                         Añadir al carrito
