@@ -1,6 +1,7 @@
 type ProductProps = {
+    id: number
     name: string
-    precio: string
+    precio: number
     img: string
 }
 
