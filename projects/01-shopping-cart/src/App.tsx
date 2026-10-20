@@ -34,7 +34,9 @@ function App() {
   }
 
   const clearCart = () => {
-    console.log('vaciar carrito')
+    setCarItems([])
+    localStorage.removeItem('cart')
+    toast.success('Carrito vaciado correctamente')
   }
 
   return (
