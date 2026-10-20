@@ -1,4 +1,8 @@
-export default function Header() {
+type HeaderProps = {
+    setIsCarOpen: (value: boolean) => void
+}
+
+function Header({ setIsCarOpen }: HeaderProps) {
     return (
         <header className="header">
             <div className="header__container">
@@ -7,7 +11,7 @@ export default function Header() {
                     Shopping <span>Cart</span>
                 </a>
 
-                <button type="button" className="header__cart" aria-label="Ver carrito de compras">
+                <button type="button" className="header__cart" onClick={() => setIsCarOpen(true)}>
                     <svg className="header__cart-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                         strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                         <circle cx="9" cy="21" r="1" />
@@ -21,3 +25,5 @@ export default function Header() {
         </header>
     );
 }
+
+export default Header
