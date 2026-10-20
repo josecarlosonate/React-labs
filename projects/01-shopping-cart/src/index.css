@@ -219,6 +219,20 @@ body {
   border-radius: 12px;
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
   padding: 20px;
+  position: absolute;
+  top: 72px;
+  right: 24px;
+  z-index: 100;
+}
+
+@media (max-width: 600px) {
+  .cart-panel {
+    top: 72px;
+    right: 16px;
+    width: calc(100% - 32px);
+    max-height: 70dvh;
+    overflow-y: auto;
+  }
 }
 
 .cart-header {
