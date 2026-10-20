@@ -9,20 +9,23 @@ function App() {
   const [isCarOpen, setIsCarOpen] = useState<boolean>(false)
   const [carItems, setCarItems] = useState<Products[]>([])
 
+  const addItemToCart = (id: number) => {
+    // si el item ya existe en cart no lo agrego
+    if (carItems.some((item) => item.id === id)) return
+
+    const item = products.find((product) => product.id === id)
+    if (!item) return
+    const newItem = [...carItems, item]
+    setCarItems(newItem)
+  }
+
   return (
     <>
       <Header setIsCarOpen={setIsCarOpen} />
       <Car isCarOpen={isCarOpen} setIsCarOpen={setIsCarOpen} carItems={carItems} />
 
       <main className="products-grid">
-        {products.map((product) => (
-          <Product
-            key={product.id}
-            name={product.name}
-            precio={product.price}
-            img={product.image}
-            id={product.id} />
-        ))}
+        {products.map((product) => <Product key={product.id} product={product} addItemToCart={addItemToCart} />)}
       </main>
 
     </>
