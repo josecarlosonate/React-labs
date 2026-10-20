@@ -1,18 +1,33 @@
+import { useState } from 'react'
+import Car from './components/Car'
 import Header from './components/Header'
 import Product from './components/Product'
+import products from './data/products.json'
+import type { Products } from './type/Products'
 
 function App() {
+  const [isCarOpen, setIsCarOpen] = useState<boolean>(false)
+  const [carItems, setCarItems] = useState<Products[]>([])
+
+  const addItemToCart = (id: number) => {
+    // si el item ya existe en cart no lo agrego
+    if (carItems.some((item) => item.id === id)) return
+
+    const item = products.find((product) => product.id === id)
+    if (!item) return
+    const newItem = [...carItems, item]
+    setCarItems(newItem)
+  }
 
   return (
     <>
-      <Header />
+      <Header setIsCarOpen={setIsCarOpen} />
+      <Car isCarOpen={isCarOpen} setIsCarOpen={setIsCarOpen} carItems={carItems} />
+
       <main className="products-grid">
-        <Product name='Laptop' precio='2.800.000 cop' img='/products/laptop.webp' />
-        <Product name='Audífonos' precio='530.000 cop' img='/products/audifonos.webp' />
-        <Product name='Smartphone' precio='1.500.000 cop' img='/products/smartphone.webp' />
-        <Product name='Smartwatch' precio='2.800.000 cop' img='/products/smartwatch.webp' />
-        <Product name='Teclado' precio='2.800.000 cop' img='/products/teclado.webp' />
+        {products.map((product) => <Product key={product.id} product={product} addItemToCart={addItemToCart} />)}
       </main>
+
     </>
   )
 }
