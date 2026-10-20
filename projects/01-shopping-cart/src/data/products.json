@@ -1,0 +1,39 @@
+
+[
+  {
+    "id": 1,
+    "name": "Laptop",
+    "price": 2800000,
+    "image": "/products/laptop.webp"
+  },
+  {
+    "id": 2,
+    "name": "Audífonos",
+    "price": 530000,
+    "image": "/products/audifonos.webp"
+  },
+  {
+    "id": 3,
+    "name": "Smartphone",
+    "price": 1500000,
+    "image": "/products/smartphone.webp"
+  },
+  {
+    "id": 4,
+    "name": "Smartwatch",
+    "price": 2800000,
+    "image": "/products/smartwatch.webp"
+  },
+  {
+    "id": 5,
+    "name": "Teclado",
+    "price": 2800000,
+    "image": "/products/teclado.webp"
+  },
+  {
+    "id": 6,
+    "name": "Mouse",
+    "price": 150000,
+    "image": "/products/mouse.webp"
+  }
+]
