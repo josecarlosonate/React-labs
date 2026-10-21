@@ -1,15 +1,28 @@
 import { Minus, Plus, ShoppingCart, Trash2, X } from "lucide-react"
-import type { Products } from "../type/Products"
+import type { CartItem } from "../type/CartItem"
 
 type CarProps = {
     isCarOpen: boolean
     setIsCarOpen: (value: boolean) => void
-    carItems: Products[]
+    carItems: CartItem[]
     removeItemFromCart: (value: number) => void
     clearCart: () => void
+    decreaseQuantity: (value: number) => void
+    increaseQuantity: (value: number) => void
 }
 
-function Car({ isCarOpen, setIsCarOpen, carItems, removeItemFromCart, clearCart }: CarProps) {
+function Car({
+    isCarOpen,
+    setIsCarOpen,
+    carItems,
+    removeItemFromCart,
+    clearCart,
+    increaseQuantity,
+    decreaseQuantity }: CarProps) {
+
+    const isEmpty = () => carItems.length == 0
+    const total = () => carItems.reduce((sum, item) => sum + (item.price * item.quantity), 0)
+
     return (
         <>
             {isCarOpen &&
@@ -18,7 +31,7 @@ function Car({ isCarOpen, setIsCarOpen, carItems, removeItemFromCart, clearCart 
                         <button className="close-btn" onClick={() => setIsCarOpen(false)}>
                             <X size={18} />
                         </button>
-                        {carItems.length == 0
+                        {isEmpty()
                             ? <div className="cart-empty">
                                 <div className="cart-empty-icon">
                                     <ShoppingCart size={32} />
@@ -33,7 +46,9 @@ function Car({ isCarOpen, setIsCarOpen, carItems, removeItemFromCart, clearCart 
                                 <div className="cart-header">
                                     <h2>Mi carrito</h2>
                                     <div className="cart-header-right">
-                                        <span className="products-badge">3 productos</span>
+                                        <span className="products-badge">
+                                            {carItems.length} {carItems.length > 1 ? 'Productos' : 'Producto'}
+                                        </span>
                                     </div>
                                 </div>
 
@@ -50,9 +65,9 @@ function Car({ isCarOpen, setIsCarOpen, carItems, removeItemFromCart, clearCart 
                                                     <p>{item.price.toLocaleString('es-ES')} COP</p>
                                                 </div>
                                                 <div className="cart-item-quantity">
-                                                    <button><Minus size={16} /></button>
-                                                    <p>1</p>
-                                                    <button><Plus size={16} /></button>
+                                                    <button onClick={() => decreaseQuantity(item.id)}><Minus size={16} /></button>
+                                                    <p>{item.quantity}</p>
+                                                    <button onClick={() => increaseQuantity(item.id)}><Plus size={16} /></button>
                                                 </div>
                                             </div>
                                             <div>
@@ -66,7 +81,7 @@ function Car({ isCarOpen, setIsCarOpen, carItems, removeItemFromCart, clearCart 
 
                                 <div className="cart-footer">
                                     <span>Total</span>
-                                    <p>{carItems.reduce((sum, item) => sum + item.price, 0).toLocaleString('es-ES')} COP</p>
+                                    <p>{total().toLocaleString('es-ES')} COP</p>
                                 </div>
 
                                 <div>

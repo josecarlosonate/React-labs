@@ -1,43 +1,14 @@
 import { useState } from 'react'
 import Car from './components/Car'
 import Header from './components/Header'
-import Product from './components/Product'
+import { ToastContainer } from 'react-toastify';
+import Product from './components/Product';
 import products from './data/products.json'
-import type { Products } from './type/Products'
-import { ToastContainer, toast } from 'react-toastify';
+import { useCart } from './hooks/useCart';
 
 function App() {
   const [isCarOpen, setIsCarOpen] = useState<boolean>(false)
-  const [carItems, setCarItems] = useState<Products[]>(() => {
-    const cart = localStorage.getItem('cart')
-    if (!cart) return []
-    return JSON.parse(cart)
-  })
-
-  const addItemToCart = (id: number) => {
-    // si el item ya existe en cart no lo agrego
-    if (carItems.some((item) => item.id === id)) return
-
-    const item = products.find((product) => product.id === id)
-    if (!item) return
-
-    const newItem = [...carItems, item]
-    setCarItems(newItem)
-    localStorage.setItem('cart', JSON.stringify(newItem))
-  }
-
-  const removeItemFromCart = (id: number) => {
-    const newCartItems = carItems.filter((item) => item.id !== id)
-    setCarItems(newCartItems)
-    localStorage.setItem('cart', JSON.stringify(newCartItems))
-    toast.success('Producto eliminado correctamente')
-  }
-
-  const clearCart = () => {
-    setCarItems([])
-    localStorage.removeItem('cart')
-    toast.success('Carrito vaciado correctamente')
-  }
+  const { carItems, addItemToCart, removeItemFromCart, clearCart, increaseQuantity, decreaseQuantity } = useCart()
 
   return (
     <>
@@ -48,7 +19,9 @@ function App() {
         setIsCarOpen={setIsCarOpen}
         carItems={carItems}
         removeItemFromCart={removeItemFromCart}
-        clearCart={clearCart} />
+        clearCart={clearCart}
+        increaseQuantity={increaseQuantity}
+        decreaseQuantity={decreaseQuantity} />
 
       <main className="products-grid">
         {products.map((product) => <Product key={product.id} product={product} addItemToCart={addItemToCart} />)}
