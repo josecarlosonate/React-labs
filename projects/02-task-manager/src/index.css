@@ -6,3 +6,47 @@ body {
   margin: 0;
   min-width: 320px;
 }
+
+[data-bs-theme='dark'] {
+  --bs-body-bg: #1e293b;
+  --bs-tertiary-bg: #0f172a;
+  --bs-body-color: #f1f5f9;
+  --bs-body-bg-rgb: 30, 41, 59;
+  --bs-tertiary-bg-rgb: 15, 23, 42;
+}
+
+[data-bs-theme='light'] .app-header {
+  border-bottom: 1px solid #e2e8f0;
+  box-shadow: 0 2px 8px rgb(15 23 42 / 6%);
+}
+
+[data-bs-theme='dark'] .app-header {
+  border-bottom: 1px solid #15181b;
+  box-shadow: 0 4px 16px rgb(0 0 0 / 35%);
+}
+
+[data-bs-theme='dark'] {
+  --bs-primary: #f59e0b;
+  --bs-primary-rgb: 245, 158, 11;
+}
+
+[data-bs-theme='dark'] .btn-primary {
+  --bs-btn-color: #111827;
+  --bs-btn-bg: #f59e0b;
+  --bs-btn-border-color: #f59e0b;
+  --bs-btn-hover-color: #111827;
+  --bs-btn-hover-bg: #fbbf24;
+  --bs-btn-hover-border-color: #fbbf24;
+  --bs-btn-active-color: #111827;
+  --bs-btn-active-bg: #d97706;
+  --bs-btn-active-border-color: #d97706;
+}
+
+[data-bs-theme='dark'] .header-filters,
+[data-bs-theme='dark'] .theme-toggle {
+  border: 1px solid rgb(245 158 11 / 20%) !important;
+
+  box-shadow:
+  0 2px 4px rgb(0 0 0 / 18%),
+  0 4px 8px rgb(0 0 0 / 15%) !important;
+}
