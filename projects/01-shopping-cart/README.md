@@ -6,7 +6,7 @@ Shopping Cart es una interfaz de catálogo de productos con un carrito interacti
 
 **[🚀 Ver demo en Netlify](https://01-shopping-cart.netlify.app/)** · **[⬅ Volver a React Labs](../../README.md)**
 
-![Vista principal de Shopping Cart](public/home.webp)
+![Vista principal de Shopping Cart](public/index.webp)
 
 ## 🎯 Objetivos de aprendizaje
 
@@ -37,18 +37,18 @@ Shopping Cart es una interfaz de catálogo de productos con un carrito interacti
 
 ## 🧠 Conceptos aplicados
 
-| Concepto | Aplicación en el proyecto |
-| --- | --- |
-| Componentes y props | Separación de encabezado, tarjeta de producto y carrito |
-| `useState` | Estado de apertura del carrito y productos seleccionados |
-| Eventos | Botones para agregar, quitar y ajustar cantidades |
-| Renderizado de listas | Productos y artículos del carrito mediante `map` |
-| Renderizado condicional | Panel abierto/cerrado y mensaje de carrito vacío |
-| TypeScript | Tipos de productos, artículos y props |
-| Hook personalizado | `useCart` reúne operaciones y estado del carrito |
-| Inmutabilidad | `map`, `filter` y spread para crear nuevos arreglos |
-| Estado derivado | Total calculado con `reduce` |
-| Persistencia | Lectura inicial y guardado del carrito en `localStorage` |
+| Concepto                | Aplicación en el proyecto                                |
+| ----------------------- | -------------------------------------------------------- |
+| Componentes y props     | Separación de encabezado, tarjeta de producto y carrito  |
+| `useState`              | Estado de apertura del carrito y productos seleccionados |
+| Eventos                 | Botones para agregar, quitar y ajustar cantidades        |
+| Renderizado de listas   | Productos y artículos del carrito mediante `map`         |
+| Renderizado condicional | Panel abierto/cerrado y mensaje de carrito vacío         |
+| TypeScript              | Tipos de productos, artículos y props                    |
+| Hook personalizado      | `useCart` reúne operaciones y estado del carrito         |
+| Inmutabilidad           | `map`, `filter` y spread para crear nuevos arreglos      |
+| Estado derivado         | Total calculado con `reduce`                             |
+| Persistencia            | Lectura inicial y guardado del carrito en `localStorage` |
 
 ## 🛠️ Tecnologías
 
