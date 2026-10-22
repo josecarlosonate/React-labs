@@ -18,7 +18,7 @@ function Header({ setTheme, theme, filter, setFilter }: HeaderProps) {
 
     return (
         <header className="bg-body app-header">
-            <div className="container py-3 d-flex justify-content-between align-items-center gap-3">
+            <div className="container py-3 d-flex justify-content-between align-items-center gap-3 style={{ maxWidth: '1200px' }}">
 
                 <div className="d-flex align-items-center gap-3">
                     <div className="bg-primary text-white rounded-3 d-flex align-items-center justify-content-center"
@@ -56,7 +56,6 @@ function Header({ setTheme, theme, filter, setFilter }: HeaderProps) {
 
             </div>
         </header >
-
     );
 }
 
