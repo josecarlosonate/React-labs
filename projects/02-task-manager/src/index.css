@@ -140,3 +140,53 @@ body {
   border-color: #fbbf24;
   color: #111827;
 }
+
+/* Resumen: tema claro */
+.summary-total {
+  background-color: #eef2ff;
+}
+
+.summary-pending {
+  background-color: #fff7ed;
+}
+
+.summary-completed {
+  background-color: #f0fdf4;
+}
+
+.summary-high {
+  background-color: #fef2f2;
+}
+
+.summary-value {
+  color: #172033;
+}
+
+.summary-label {
+  color: #596579;
+}
+
+/* Resumen: tema oscuro */
+[data-bs-theme="dark"] .summary-total {
+  background-color: #273552;
+}
+
+[data-bs-theme="dark"] .summary-pending {
+  background-color: #403326;
+}
+
+[data-bs-theme="dark"] .summary-completed {
+  background-color: #203e36;
+}
+
+[data-bs-theme="dark"] .summary-high {
+  background-color: #422c36;
+}
+
+[data-bs-theme="dark"] .summary-value {
+  color: #f1f5f9;
+}
+
+[data-bs-theme="dark"] .summary-label {
+  color: #b9c5d6;
+}
