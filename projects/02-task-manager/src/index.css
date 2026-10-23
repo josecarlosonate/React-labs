@@ -55,3 +55,138 @@ body {
   0 2px 4px rgb(0 0 0 / 18%),
   0 4px 8px rgb(0 0 0 / 15%) !important;
 }
+
+[data-bs-theme='light'] .task-form-field {
+  background-color: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  color: #1e293b;
+}
+
+[data-bs-theme='dark'] .task-form-field {
+  background-color: #172238;
+  border: 1px solid #35445c;
+  color: #f1f5f9;
+}
+
+[data-bs-theme='light'] .task-form-field:focus {
+  background-color: #ffffff;
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 0.2rem rgb(13 110 253 / 12%);
+}
+
+[data-bs-theme='dark'] .task-form-field:focus {
+  background-color: #172238;
+  border-color: #f59e0b;
+  box-shadow: 0 0 0 0.2rem rgb(245 158 11 / 15%);
+}
+
+[data-bs-theme='dark'] .task-form-field::placeholder {
+  color: #94a3b8;
+}
+
+[data-bs-theme='dark'] .task-form-field {
+  color-scheme: dark;
+}
+
+[data-bs-theme='light'] .task-form-field {
+  color-scheme: light;
+}
+
+[data-bs-theme='dark'] .task-priority-select {
+  background-color: #172238;
+  color: #f1f5f9;
+}
+
+[data-bs-theme='dark'] .task-priority-select option {
+  background-color: #172238;
+  color: #f1f5f9;
+}
+
+/* Botones del formulario */
+[data-bs-theme='light'] .task-form-clear {
+  background-color: #e2e8f0;
+  border: 1px solid transparent;
+  color: #475569;
+  box-shadow: none;
+}
+
+[data-bs-theme='dark'] .task-form-clear {
+  background-color: #334155;
+  border: 1px solid transparent;
+  color: #f1f5f9;
+  box-shadow: none;
+}
+
+[data-bs-theme='light'] .task-form-clear:hover {
+  background-color: #cbd5e1;
+  border-color: transparent;
+  color: #334155;
+}
+
+[data-bs-theme='dark'] .task-form-clear:hover {
+  background-color: #475569;
+  color: #ffffff;
+}
+
+[data-bs-theme='dark'] .task-form-submit {
+  background-color: #f59e0b;
+  border: 1px solid #f59e0b;
+  color: #111827;
+  box-shadow: none;
+}
+
+[data-bs-theme='dark'] .task-form-submit:hover {
+  background-color: #fbbf24;
+  border-color: #fbbf24;
+  color: #111827;
+}
+
+/* Resumen: tema claro */
+.summary-total {
+  background-color: #eef2ff;
+}
+
+.summary-pending {
+  background-color: #fff7ed;
+}
+
+.summary-completed {
+  background-color: #f0fdf4;
+}
+
+.summary-high {
+  background-color: #fef2f2;
+}
+
+.summary-value {
+  color: #172033;
+}
+
+.summary-label {
+  color: #596579;
+}
+
+/* Resumen: tema oscuro */
+[data-bs-theme="dark"] .summary-total {
+  background-color: #273552;
+}
+
+[data-bs-theme="dark"] .summary-pending {
+  background-color: #403326;
+}
+
+[data-bs-theme="dark"] .summary-completed {
+  background-color: #203e36;
+}
+
+[data-bs-theme="dark"] .summary-high {
+  background-color: #422c36;
+}
+
+[data-bs-theme="dark"] .summary-value {
+  color: #f1f5f9;
+}
+
+[data-bs-theme="dark"] .summary-label {
+  color: #b9c5d6;
+}
