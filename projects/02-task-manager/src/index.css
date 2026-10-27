@@ -231,3 +231,14 @@ body {
   outline: 2px solid #fbbf24;
   outline-offset: 2px;
 }
+
+/* Hover azul de los filtros rápidos en tema claro */
+[data-bs-theme='light'] .quick-filters-card .btn:hover {
+  background-color: #cfe2ff !important;
+  border-color: #9ec5fe !important;
+  color: #084298 !important;
+}
+
+[data-bs-theme='light'] .quick-filters-card .btn:hover span {
+  color: #084298 !important;
+}
