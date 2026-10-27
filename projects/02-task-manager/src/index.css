@@ -242,3 +242,14 @@ body {
 [data-bs-theme='light'] .quick-filters-card .btn:hover span {
   color: #084298 !important;
 }
+
+/* Hover ámbar de los filtros rápidos en tema oscuro */
+[data-bs-theme='dark'] .quick-filters-card .d-flex.flex-column.gap-2 > .btn:not(:first-child):hover {
+  background-color: #f59e0b !important;
+  border-color: #f59e0b !important;
+  color: #111827 !important;
+}
+
+[data-bs-theme='dark'] .quick-filters-card .d-flex.flex-column.gap-2 > .btn:not(:first-child):hover span {
+  color: #111827 !important;
+}
