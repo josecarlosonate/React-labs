@@ -4,6 +4,7 @@ import type { Theme } from "./types/Theme"
 import type { Filters } from "./types/Filters"
 import TaskForm from "./components/TaskForm"
 import Summary from "./components/Summary"
+import QuickFilters from "./components/QuickFilters"
 
 function App() {
   const [theme, setTheme] = useState<Theme>('light')
@@ -24,6 +25,7 @@ function App() {
           </div>
           <div className="col-lg-4">
             <Summary />
+            <QuickFilters />
           </div>
         </div>
       </div>
