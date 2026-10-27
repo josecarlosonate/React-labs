@@ -253,3 +253,47 @@ body {
 [data-bs-theme='dark'] .quick-filters-card .d-flex.flex-column.gap-2 > .btn:not(:first-child):hover span {
   color: #111827 !important;
 }
+
+
+/* Lista de tareas: adaptación al tema oscuro */
+[data-bs-theme='dark'] .list-task-card {
+  background-color: #1e293b;
+  border: 1px solid #334155 !important;
+  color: #f1f5f9;
+}
+
+[data-bs-theme='dark'] .list-task-search {
+  background-color: #172238;
+  border-color: #35445c;
+  color: #f1f5f9;
+}
+
+[data-bs-theme='dark'] .list-task-search::placeholder {
+  color: #94a3b8;
+}
+
+[data-bs-theme='dark'] .list-task-search:focus {
+  background-color: #172238;
+  border-color: #f59e0b;
+  box-shadow: 0 0 0 0.2rem rgb(245 158 11 / 15%);
+  color: #f1f5f9;
+}
+
+[data-bs-theme='dark'] .list-task-card .text-muted {
+  color: #b9c5d6 !important;
+}
+
+[data-bs-theme='dark'] .list-task-action {
+  background-color: #334155;
+  color: #e2e8f0 !important;
+}
+
+[data-bs-theme='dark'] .list-task-action:hover {
+  background-color: #f59e0b;
+  color: #111827 !important;
+}
+
+[data-bs-theme='dark'] .list-task-action.list-task-delete:hover {
+  background-color: #f59e0b;
+  color: #111827 !important;
+}

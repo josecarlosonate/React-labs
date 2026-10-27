@@ -5,6 +5,7 @@ import type { Filters } from "./types/Filters"
 import TaskForm from "./components/TaskForm"
 import Summary from "./components/Summary"
 import QuickFilters from "./components/QuickFilters"
+import List from "./components/List"
 
 function App() {
   const [theme, setTheme] = useState<Theme>('light')
@@ -22,6 +23,7 @@ function App() {
         <div className="row g-4">
           <div className="col-lg-8">
             <TaskForm />
+            <List />
           </div>
           <div className="col-lg-4">
             <Summary />
