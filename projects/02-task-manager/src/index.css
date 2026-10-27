@@ -190,3 +190,44 @@ body {
 [data-bs-theme="dark"] .summary-label {
   color: #b9c5d6;
 }
+
+/* QuickFilters: ajustes exclusivos para tema oscuro.
+   Los selectores usan las clases Bootstrap que ya existen en QuickFilters.tsx. */
+[data-bs-theme="dark"] .quick-filters-card {
+  background-color: #1e293b;
+  border: 1px solid #334155;
+}
+
+[data-bs-theme="dark"] .quick-filters-card .d-flex.flex-column.gap-2 > .btn {
+  background-color: #273449 !important;
+  border-color: #3b4a60 !important;
+  color: #e2e8f0 !important;
+}
+
+[data-bs-theme="dark"] .quick-filters-card .d-flex.flex-column.gap-2 > .btn .text-dark-emphasis,
+[data-bs-theme="dark"] .quick-filters-card .d-flex.flex-column.gap-2 > .btn .text-muted {
+  color: #b9c5d6 !important;
+}
+
+/* El primer botón representa "Todas las tareas", seleccionado en el diseño actual. */
+[data-bs-theme="dark"] .quick-filters-card .d-flex.flex-column.gap-2 > .btn:first-child {
+  background-color: #f59e0b !important;
+  border-color: #f59e0b !important;
+  color: #111827 !important;
+}
+
+[data-bs-theme="dark"] .quick-filters-card .d-flex.flex-column.gap-2 > .btn:first-child .text-dark-emphasis,
+[data-bs-theme="dark"] .quick-filters-card .d-flex.flex-column.gap-2 > .btn:first-child .text-muted {
+  color: #111827 !important;
+}
+
+[data-bs-theme="dark"] .quick-filters-card .d-flex.flex-column.gap-2 > .btn:not(:first-child):hover {
+  background-color: #334155 !important;
+  border-color: #64748b !important;
+  color: #ffffff !important;
+}
+
+[data-bs-theme="dark"] .quick-filters-card .d-flex.flex-column.gap-2 > .btn:focus-visible {
+  outline: 2px solid #fbbf24;
+  outline-offset: 2px;
+}
