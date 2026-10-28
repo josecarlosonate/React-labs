@@ -23,6 +23,7 @@ export function useCart() {
         const updatedCart = [...carItems, newItem];
         setCarItems(updatedCart)
         localStorage.setItem('cart', JSON.stringify(updatedCart))
+        toast.success('Producto agregado al carrito')
     }
 
     const removeItemFromCart = (id: number) => {
